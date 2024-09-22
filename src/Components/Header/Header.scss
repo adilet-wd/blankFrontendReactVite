@@ -1,0 +1,77 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/color-variables.scss';
+
+.header {
+  height: 100px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  background-color:  white;
+  color:  $colorTextDark;
+  .navbar {
+    height: 100%;
+  }
+  .header-container {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    @media (max-width: $media-width-xs) {
+      padding: 0 12px;
+    }
+  }
+  .navLogo{
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    @media (max-width: $media-width-xs) {
+      max-width: 60px;
+    }
+  }
+  .navSearch_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 60px;
+    border: 1px #ec1c24 solid;
+    padding: 0 0.5rem 0 1rem;
+    @media (max-width: $media-width-md) {
+      margin-top: 15px;
+    }
+  }
+  .offcanvas-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #ec1c24;
+  }
+  .navLinks{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: $colorTextDark;
+    gap: 5px;
+    a {
+      color: inherit;
+      transition: 0.2s ease-out;
+      text-transform: uppercase;
+      &:hover {
+        transition: 0.2s ease-in-out;
+        color: $backgroundColor_light_blue;
+      }
+    }
+    .login-button {
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 1px solid $backgroundColor_light_blue;
+      padding: 0 25px;
+      transition: 0.2s ease-out;
+      &:hover {
+        background-color: $backgroundColor_light_blue;
+        color: $colorTextWhite;
+        transition: 0.2s ease-in-out;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import "../../styles/color-variables.scss";
+@import "../../styles/breakpoints.scss";
+.register {
+  &-img {
+    width: 50%;
+    height: auto;
+  }
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(70vh + 56px + 30px);
+    color: $colorTextWhite;
+  }
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    &-title {
+      color: $colorTextDark;
+      font-size: 30px;
+    }
+  }
+  &-component {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  &__password {
+    display: flex;
+    flex-direction: column;
+  }
+  &__password-top {
+    position: relative;
+  }
+  &__password-logo {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  &__succeed {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: #DC3545;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+  &__invalid-feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+    .invalid-feeback__item {
+      display: flex;
+      gap: 5px;
+    }
+    &-icon {
+      fill: aquamarine;
+    }
+  }
+  &-form-wrapper {
+    padding: 40px 40px 10px 40px;
+    @media (max-width: $media-width-sm) {
+      padding: 15px;
+    }
+  }
+  &__button {
+    margin-top: 36px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 1.1428;
+    font-weight: 600;
+    border: none;
+    padding: 15px 32px;
+    color: $colorTextWhite;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  &__form {
+    margin-bottom: 35px;
+  }
+  &__option-voity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    a {
+      color: #0056b3;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .register {
+    &-container {
+      flex-direction: column;
+    }
+    &-img {
+      margin-top: 10px;
+      width: 80%;
+    }
+  }
+}
