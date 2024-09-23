@@ -7,7 +7,7 @@
   max-width: 100%;
   width: 100%;
   padding: 100px 0 20px 0;
-  background-color: $backgroundColor_dark_gray;
+  background-color: $backgroundColor_dark_green;
   color: $colorTextWhite;
   @media (max-width: $media-width-xs) {
     padding: 40px 0 40px 0;
@@ -57,6 +57,7 @@
         width: 100%;
       }
       .footer__subtitle {
+        color: $textColor_light_yellow;
         display: flex;
         align-items: center;
         gap: 5px;
@@ -73,49 +74,6 @@
       &.footer__contacts {
         gap: 2px;
         @media (max-width: $media-width-xs) {
-          margin-top: 10px;
-        }
-      }
-      &.buttons {
-        max-width: 142px;
-        width: 100%;
-        .footer__button {
-          width: 100%;
-          height: 48px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 10px;
-          border: 1px solid $backgroundColor_light_blue;
-          padding: 9px;
-          transition: 0.2s ease-out;
-          &.registration {
-            background-color: $backgroundColor_light_blue;
-            &:hover {
-              background-color: transparent;
-              transition: 0.2s ease-in-out;
-              opacity: 1;
-            }
-          }
-          &.login {
-            background-color: transparent;
-            &:hover {
-              background-color: $backgroundColor_light_blue;
-              transition: 0.2s ease-in-out;
-              opacity: 1;
-            }
-          }
-        }
-        & {
-          display: flex;
-          flex-direction: column;
-        }
-        @media (max-width: $media-width-lg) {
-          max-width: 180px;
-        }
-        @media (max-width: $media-width-xs) {
-          max-width: 240px;
-          width: 100%;
           margin-top: 10px;
         }
       }

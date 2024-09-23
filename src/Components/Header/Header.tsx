@@ -27,13 +27,14 @@ const Header = () => {
                     >
                         <Offcanvas.Body>
                             <Offcanvas.Header closeButton>
-                                <Offcanvas.Title>Brand</Offcanvas.Title>
+                                <Offcanvas.Title><img src={logo} alt="error" className='title-logo'/></Offcanvas.Title>
                             </Offcanvas.Header>
-                            <Nav className="justify-content-end flex-grow-1 pe-3 navLinks">
+                            <Nav className="justify-content-end navLinks">
                                 <Nav.Link href="/">Home</Nav.Link>
+                                <Nav.Link href="/">Posts</Nav.Link>
                                 {auth?.isAuthenticated ?
-                                    <Nav.Link className='' href="/account">Account</Nav.Link>:
-                                    <Nav.Link className='' href="/auth/login">Login</Nav.Link>}
+                                    <Nav.Link className="login-button" href="/account">Account</Nav.Link>:
+                                    <Nav.Link className="login-button" href="/auth/login">Login</Nav.Link>}
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

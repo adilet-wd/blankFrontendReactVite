@@ -11,6 +11,10 @@ import Login from "./Pages/Login/Login.tsx";
 import Account from "./Pages/Account/Account.tsx";
 import Register from "./Pages/Register/Register.tsx";
 
+// Дизайн
+// https://www.figma.com/design/2KnxvPD8ktnmoNMbgz4tzj/Lemon?node-id=1-775&node-type=frame&t=VW0yr0CtTqvcCykc-0
+
+
 function App() {
   return (
       <>
