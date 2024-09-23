@@ -31,9 +31,9 @@ const Header = () => {
                             </Offcanvas.Header>
                             <Nav className="justify-content-end flex-grow-1 pe-3 navLinks">
                                 <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/">Services</Nav.Link>
-                                <Nav.Link href="/">About</Nav.Link>
-                                {auth?.isAuthenticated ?  <Nav.Link className='login-button' href="/account">Account</Nav.Link> : <Nav.Link className='login-button' href="/auth/login">Login</Nav.Link>}
+                                {auth?.isAuthenticated ?
+                                    <Nav.Link className='' href="/account">Account</Nav.Link>:
+                                    <Nav.Link className='' href="/auth/login">Login</Nav.Link>}
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

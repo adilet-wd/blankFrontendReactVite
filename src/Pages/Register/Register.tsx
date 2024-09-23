@@ -408,6 +408,7 @@ export default function Register() {
     return (
         <Container className="register-container">
             <main className="register-component">
+                <h1 className="register__title title text-center">Register</h1>
                 <div className="register-form-wrapper">
                     <Form className="register__form" noValidate validated={validated} onSubmit={handleSubmit}>
                         <Form.Group className="mb-3 register__group register__email" controlId="validationEmail">

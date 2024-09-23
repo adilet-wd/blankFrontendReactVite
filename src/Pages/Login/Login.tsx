@@ -98,6 +98,7 @@ export default function Login() {
     return (
         <Container className="login-container">
             <main className="login-component">
+                <h1 className="login__title title text-center">Login</h1>
                 <div className="login-form-wrapper">
                     <Form className="login__form " noValidate onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="validationMail">
