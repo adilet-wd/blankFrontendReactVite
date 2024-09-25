@@ -3,12 +3,13 @@
 
 .header {
   height: 100px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 400;
   background-color:  white;
   color:  $colorTextDark;
   .navbar {
     height: 100%;
+    border-bottom: $borderColor_light_gray 1px solid;
   }
   .header-container {
     height: 100%;
@@ -17,6 +18,15 @@
     @media (max-width: $media-width-xs) {
       padding: 0 12px;
     }
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Outfit", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
   }
   .navLogo{
     max-width: 80px;
@@ -37,41 +47,39 @@
       margin-top: 15px;
     }
   }
-  .offcanvas-title{
-    font-size: 24px;
-    font-weight: 600;
-    color: #ec1c24;
-  }
-  .navLinks{
+  .navbar-nav {
     display: flex;
     align-items: center;
-    font-size: 18px;
-    color: $colorTextDark;
-    gap: 5px;
-    a {
-      color: inherit;
-      transition: 0.2s ease-out;
-      text-transform: uppercase;
-      &:hover {
-        transition: 0.2s ease-in-out;
-        color: $backgroundColor_light_blue;
-      }
+    flex-grow: 1;
+    gap: 10px;
+  }
+  .navLinks a{
+    color: $textColor_blue;
+    transition: 0.2s ease-out;
+    text-transform: uppercase;
+    &:hover {
+      color: $textColor_gray;
+      transition: all 0.3s ease-in-out;
     }
-    .login-button {
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      border: 1px solid $backgroundColor_light_blue;
-      padding: 0 25px;
-      transition: 0.2s ease-out;
-      &:hover {
-        background-color: $backgroundColor_light_blue;
-        color: $colorTextWhite;
-        transition: 0.2s ease-in-out;
-        opacity: 1;
-      }
-    }
+  }
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $borderColor_light_gray;
+  padding: 8px 25px !important; // Adjust padding as needed
+  box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
+  transition: 0.2s ease-out;
+  &:hover {
+    border: 1px solid $borderColor_blue;
+    transition: 0.2s ease-in-out;
+  }
+}
+.offcanvas-title {
+  .title-logo {
+    max-width: 36px;
+    width: 100%;
+    height: auto;
   }
 }

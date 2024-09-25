@@ -5,12 +5,15 @@
     width: 50%;
     height: auto;
   }
+  &__title {
+    color: $textColor_blue;
+  }
   &-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 60vh;
     color: $colorTextWhite;
   }
   &-header {
@@ -19,12 +22,15 @@
     align-items: center;
     margin-bottom: 30px;
     &-title {
-      color: $colorTextDark;
+      color: $textColor_blue;
       font-size: 30px;
     }
   }
   &-component {
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     margin: 0 auto;
     border-radius: 1rem;
@@ -50,8 +56,7 @@
     }
   }
   &__button {
-    margin-top: 36px;
-    margin-bottom: 5px;
+    margin: 10px 0 5px 0;
     width: 100%;
     border-radius: 4px;
     display: flex;
@@ -60,13 +65,17 @@
     font-size: 1.4rem;
     line-height: 1.1428;
     font-weight: 600;
-    border: none;
     padding: 15px 32px;
-    color: $colorTextWhite;
+    color: $textColor_blue;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: $backgroundColor_light_yellow;
+    border: 1px solid $backgroundColor_light_yellow;
     &:hover {
-      background-color: #0056b3;
+      background-color: rgba($backgroundColor_light_yellow, 0.9);
+      color: $textColor_blue;
+      border-color: $borderColor_blue;
+      transition: background-color 0.3s ease-in;
     }
   }
   &__form {

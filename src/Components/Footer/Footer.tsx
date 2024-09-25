@@ -1,9 +1,7 @@
 import "./Footer.scss";
 import {Link} from "react-router-dom";
-import {useAuth} from "../../App/auth/authProvider.tsx";
 
 export default function Footer() {
-    const auth = useAuth();
     return (
         <footer className="footer">
             <div className="footer-container container">
@@ -25,15 +23,6 @@ export default function Footer() {
                     <a href="#">+996 (500) 29 55 64</a>
                     <div className="footer__subtitle">Address</div>
                     <div>St. Kiev 323</div>
-                </div>
-                <div className="footer__column buttons">
-                    {auth?.isAuthenticated ?
-                        <Link to="/account" className="footer__button registration account">Account</Link> :
-                        <>
-                            <Link to="/auth/login/" className="footer__button login">Login</Link>
-                            <Link to="/auth/register/" className="footer__button registration">Register</Link>
-                        </>}
-
                 </div>
             </div>
         </footer>
